@@ -1,4 +1,6 @@
-# HUMO
+
+![alt text](https://github.com/bregydoc/HUMO/raw/humo_logo.png "Humo logo")
+
 ## HUMO = Human Utec Middle (O)Internet
 Unofficial API for UTEC EDU system (It works so slow as the original).
 It's a alpha preview, you can read the main code (humo.py).
