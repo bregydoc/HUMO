@@ -18,7 +18,8 @@ epoch = credentials['cycle']
 
 driver= webdriver.PhantomJS()
 # driver= webdriver.Chrome("E:\QA\Resource\WEBDRIVER\chromedriverserver\chromedriver.exe")
-driver.get("https://accounts.google.com/signin/oauth/identifier?client_id=106735915676-jgh1pts7v6lss7l5cqdi472b7lfn78lc.apps.googleusercontent.com&as=30faa23d961e91a2&destination=http%3A%2F%2Fcore.utecsup.com&approval_state=!ChRzZFh1OElpYk1sWVowWjlZWkFjShIfZzV1MlhBR1dBazRRTVBCQmxsdzFRaXQ1WXRXWUJCWQ%E2%88%99ACThZt4AAAAAWjDR120lGDiKRrPa-3azWbjS8pUz5phc&passive=1209600&oauth=1&sarp=1&scc=1&xsrfsig=AHgIfE80PelFvRLLA6vsfTBREFazdpG1lw&flowName=GeneralOAuthFlow")
+driver.get("http://core.utecsup.com/UTEC-Web")
+
 time.sleep(3)
 
 putEmail = ActionChains(driver)
@@ -91,3 +92,20 @@ finalfile = open('raw.html', 'wb')
 
 finalfile.write(data.encode('utf-8'))
 finalfile.close()
+
+# 2nd Way: EXPORT THE NOTES
+# downloadGrades = 'http://core.utecsup.com/UTEC-Web/action/exportarconsultanotasactuales'
+
+# session = requests.Session()
+# cookies = driver.get_cookies()
+
+# for cookie in cookies:
+#     session.cookies.set(cookie['name'], cookie['value'])
+# response = session.get(downloadGrades)
+# print type(response.content)
+# filename = 'gradesss.xls'
+# with open(filename, mode='wb') as localfile:
+# 	localfile.write(response.content)
+# action.send_keys(Keys.ENTER)
+# action.send_keys('password')
+# action.send_keys(Keys.ENTER)
