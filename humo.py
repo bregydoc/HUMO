@@ -10,11 +10,11 @@ jsonPath = 'credentials.json'
 
 jo = open(jsonPath, 'r')
 r_credentials = jo.read()
-credentials = json.loads(rawData)
+credentials = json.loads(r_credentials)
 
 email = credentials['email']
-password = credentialss['password']
-epoch = credentialss['cycle']
+password = credentials['password']
+epoch = credentials['cycle']
 
 driver= webdriver.PhantomJS()
 # driver= webdriver.Chrome("E:\QA\Resource\WEBDRIVER\chromedriverserver\chromedriver.exe")
